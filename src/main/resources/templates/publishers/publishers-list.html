@@ -1,29 +1,75 @@
 <!DOCTYPE html>
-<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
+    <title>Publisher List</title>
     <meta charset="UTF-8">
-    <title>Publishers list</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!--===============================================================================================-->
 </head>
+<body>
 
-<table>
-    <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>City</th>
-        <th>Address</th>
-        <th>State</th>
-        <th>Zip</th>
+<div class="limiter">
+    <div class="container-table100">
+        <div class="wrap-table100">
+            <div class="table100">
+                <table>
+                    <thead>
+                    <tr class="table100-head">
+                        <th class="column1">ID</th>
+                        <th class="column2">Name</th>
+                        <th class="column3">Address</th>
+                        <th class="column3">City</th>
+                        <th class="column3">State</th>
+                        <th class="column3">Zip</th>
 
-    </tr>
-    <tr th:each="publisher : ${publishers}">
-        <td th:text="${publisher.id}">123</td>
-        <td th:text="${publisher.name}"> Oxford Pub</td>
-        <td th:text="${publisher.city}">Oxford</td>
-        <td th:text="${publisher.addressLine1}">address</td>
-        <td th:text="${publisher.state}">London</td>
-        <td th:text="${publisher.zip}">343233</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="publisher : ${publishers}">
+                        <td class="column1" th:text="${publisher.id}">2017-09-29 01:22</td>
+                        <td class="column2" th:text="${publisher.name}">200398</td>
+                        <td class="column3" th:text="${publisher.city}">iPhone X 64Gb Grey</td>
+                        <td class="column3" th:text="${publisher.addressLine1}">iPhone X 64Gb Grey</td>
+                        <td class="column3" th:text="${publisher.state}">iPhone X 64Gb Grey</td>
+                        <td class="column3" th:text="${publisher.zip}">iPhone X 64Gb Grey</td>
 
-    </tr>
-</table>
+                    </tr>
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+===============================================================================================-->
+<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+<script src="vendor/bootstrap/js/popper.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+<script src="js/main.js"></script>
 
 </body>
+</html>
